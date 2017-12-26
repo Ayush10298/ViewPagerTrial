@@ -47,11 +47,11 @@ public class MainActivity extends FragmentActivity {
         return members;
     }
 
-     static String getMessage(int position){
+    /* static String getMessage(int position){
         String msg;
         msg=generateList().get(position).toString();
         return msg;
-     }
+     }*/
 
     @Override
     public void onBackPressed() {

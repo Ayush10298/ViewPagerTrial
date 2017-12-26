@@ -17,18 +17,20 @@ public class SwipeAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public android.support.v4.app.Fragment getItem(int position) {
-        Fragment fragment = new ScreenSlidePageFragment();
+       /* Fragment fragment = new ScreenSlidePageFragment();
         Bundle bundle = new Bundle();
-        bundle.getCharArray(MainActivity.generateList().get(position).toString());
+        bundle.putString(MainActivity.generateList().get(position).toString());
         fragment.setArguments(bundle);
-        return fragment;
+        return fragment;*/
+
+       Member member3= MainActivity.generateList().get(position);
+       return ScreenSlidePageFragment.getName(member3.getMessage());
     }
 
     @Override
     public int getCount() {
         return MainActivity.generateList().size();
     }
-
 
     public CharSequence getPageTitle(int position){
         switch (position){
